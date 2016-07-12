@@ -19,7 +19,28 @@
 <button id= "createPlayer">Create Player</button>
 
 <script src='https://code.jquery.com/jquery-2.1.3.min.js'></script>
-<script src="game.js"></script>
+<script>
+
+$("#createPlayer").on("click", function(){
+		
+		//  s is an object where the information is being posted
+		var newPlayer = {
+			username: $('#createUser').val().trim(),
+			password: $('#createPassword').val().trim()
+			
+		};
+
+		console.log(newPlayer);
+
+	
+var currentURL = window.location.origin;
+		// info will be posted in the api table
+	    $.post(currentURL + " ", newPlayer,
+	    function(data){
+
+
+});
+</script>
 
 </body>
 </html>
