@@ -36,11 +36,11 @@ db.once('open', function () {
 
 
 // -------------------------------------------------
-app.get('/', function(req, res) {
+app.get('/signup', function(req, res) {
     res.sendfile('signup.html', {root: __dirname })
 });
 
-app.get('/login', function(req, res) {
+app.get('/', function(req, res) {
     res.sendfile('login.html', {root: __dirname })
 });
 
@@ -90,7 +90,7 @@ app.post('/add', function(req, res){
       }
       else {
        res.sendfile('blank.html', {root: __dirname })
-        res.send("Saved User");
+        //res.send("Saved User");
       }
     })
 })
