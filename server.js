@@ -89,7 +89,7 @@ app.post('/add', function(req, res){
         console.log(err);
       }
       else {
-      //  res.sendfile('blank.html', {root: __dirname })
+       res.sendfile('blank.html', {root: __dirname })
         res.send("Saved User");
       }
     })
