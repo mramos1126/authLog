@@ -74,8 +74,7 @@ app.post('/auth', function(req, res){
         //res.send("Authenticated");
       }
       else {
-        res.send("Incorrect username or password");
-       
+       res.sendfile('login.html', {root: __dirname })
       }
     }
 
