@@ -36,15 +36,15 @@ db.once('open', function () {
 
 
 // -------------------------------------------------
-  app.use(function(req, res){
-    res.sendFile(__dirname +'signup.html');
-  });
+app.get('/', function(req, res) {
+    res.sendfile('signup.html', {root: __dirname })
+});
 
+app.get('/login', function(req, res) {
+    res.sendfile('login.html', {root: __dirname })
+});
 
-
-
-
-app.get('/', function(req, res){
+app.get('/check', function(req, res){
 
   User.find({}).exec(function(err, users){
 
