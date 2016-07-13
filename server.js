@@ -70,7 +70,8 @@ app.post('/auth', function(req, res){
     else {
 
       if(doc.length === 1){
-        res.send("Authenticated");
+        res.sendfile('blank.html', {root: __dirname })
+        //res.send("Authenticated");
       }
       else {
         res.send("Incorrect username or password");
@@ -88,6 +89,7 @@ app.post('/add', function(req, res){
         console.log(err);
       }
       else {
+      //  res.sendfile('blank.html', {root: __dirname })
         res.send("Saved User");
       }
     })
