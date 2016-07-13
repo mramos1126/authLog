@@ -36,6 +36,13 @@ db.once('open', function () {
 
 
 // -------------------------------------------------
+  app.use(function(req, res){
+    res.sendFile(__dirname +'signup.html');
+  });
+
+
+
+
 
 app.get('/', function(req, res){
 
